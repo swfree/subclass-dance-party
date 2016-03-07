@@ -17,6 +17,39 @@
   100% { border: 10px solid purple; }
 }
 
+@-webkit-keyframes bouncing{
+  0% { transform: translateY(-100%); }
+  5% { transform: translateY(-200%); }
+  15% { transform: translateY(0%); }
+  30% { transform: translateY(-100%); }
+  40% { transform: translateY(0%); }
+  50% { transform: translateY(-60%); }
+  70% { transform: translateY(0%); }
+  80% { transform: translateY(-30%); }
+  90% { transform: translateY(0%); }
+  95% { transform: translateY(-14%); }
+  97% { transform: translateY(0%); }
+  99% { transform: translateY(-6%); }
+  100% { transform: translateY(0%); }
+}
+
+@keyframes bouncing{
+  0% { transform: translateY(-100%); }
+  5% { transform: translateY(-200%); }
+  15% { transform: translateY(0%); }
+  30% { transform: translateY(-100%); }
+  40% { transform: translateY(0%); }
+  50% { transform: translateY(-60%); }
+  70% { transform: translateY(0%); }
+  80% { transform: translateY(-30%); }
+  90% { transform: translateY(0%); }
+  95% { transform: translateY(-14%); }
+  97% { transform: translateY(0%); }
+  99% { transform: translateY(-6%); }
+  100% { transform: translateY(0%); }
+}
+
+
 
 body, html{
   height:100%;
@@ -52,4 +85,9 @@ body, a:link, a:visited, a:active{
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
-
+.bouncyDancer{
+  animation-name: bouncing;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  /*animation-direction: alternate;*/
+}
