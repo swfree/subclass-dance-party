@@ -11,7 +11,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   
 };
 
-makeDancer.prototype.setPosition = function(top, left){
+makeDancer.prototype.setPosition = function(top, left) {
   var styleSettings = {
     top: top,
     left: left
