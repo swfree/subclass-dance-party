@@ -1,3 +1,23 @@
+@-webkit-keyframes color_change{
+  0% { border: 10px solid red; }
+  20% { border: 10px solid orange; }
+  40% { border: 10px solid yellow; }
+  60% { border: 10px solid green; }
+  80% { border: 10px solid blue; }
+  100% { border: 10px solid purple; }
+}
+
+
+@keyframes color_change{
+  0% { border: 10px solid red; }
+  20% { border: 10px solid orange; }
+  40% { border: 10px solid yellow; }
+  60% { border: 10px solid green; }
+  80% { border: 10px solid blue; }
+  100% { border: 10px solid purple; }
+}
+
+
 body, html{
   height:100%;
 }
@@ -24,4 +44,12 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+} 
+
+.rainbowDancer{
+  animation-name: color_change;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+
