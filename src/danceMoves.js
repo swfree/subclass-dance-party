@@ -24,5 +24,8 @@ var lineUp = function() {
     }
   }
   
+};
+
+var flip = function() {
 
 };
