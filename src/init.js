@@ -51,5 +51,11 @@ $(document).ready(function() {
       }, 1000);
     }
   });
+  $('.trumpButton').on('click', function() {
+    $('body').css('background-image', 'url(assets/trumpdancefloor.jpg)');
+  //backgroundSize: cover});
+    $('.mainDancer').attr('src', 'assets/TrumpTRex.png');
+    $('.danceMusic').attr('src', 'assets/trumpRemix.mp3');
+  });
 });
 
