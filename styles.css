@@ -1,3 +1,4 @@
+/* Rainbow Dancer Code */
 @-webkit-keyframes color_change{
   0% { border: 10px solid red; }
   20% { border: 10px solid orange; }
@@ -6,7 +7,6 @@
   80% { border: 10px solid blue; }
   100% { border: 10px solid purple; }
 }
-
 
 @keyframes color_change{
   0% { border: 10px solid red; }
@@ -17,6 +17,7 @@
   100% { border: 10px solid purple; }
 }
 
+/* Bouncy Dancer Code */ 
 @-webkit-keyframes bouncing{
   0% { transform: translateY(-100%); }
   5% { transform: translateY(-200%); }
@@ -49,7 +50,13 @@
   100% { transform: translateY(0%); }
 }
 
-
+/* BackFlip Code */
+@-webkit-keyframes spin{
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin{
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+}
 
 body, html{
   height:100%;
@@ -99,8 +106,17 @@ body, a:link, a:visited, a:active{
 .mainDancer{
   width: 400px;
   height: 400px;
+  position:absolute;
+  top: 50%;
+  left: 35%;
+  /*transform: translate(-47.5%, -50%); /* Allen moves as page resizes*/*/
 }
-/*.flipped{
-  width: 200px;
-  height: 200px;
-}*/
+.flipped{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+.backflip{
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}

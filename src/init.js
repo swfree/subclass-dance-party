@@ -35,5 +35,21 @@ $(document).ready(function() {
       window.dancers.push(dancer.$node);
     }
   });
+
+  $(document).on('keydown', function (e) { //TODO: on spacebar keypress
+    e.preventDefault();
+    if (e.which === 37) { // left arrow
+      // move left
+    } else if (e.which === 39) { // right arrow
+      // move right
+    } else if (e.which === 32) { // space bar
+      $('.mainDancer').removeClass('flipped');
+      $('.mainDancer').addClass('backflip'); // replace 'backflip' with currentMove
+      var allenDancer = $('.mainDancer');
+      setTimeout(function() {
+        $(allenDancer).removeClass('backflip'); // replace 'backflip' with currentMove
+      }, 1000);
+    }
+  });
 });
 

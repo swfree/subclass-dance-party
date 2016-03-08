@@ -26,6 +26,7 @@ var lineUp = function() {
   
 };
 
-var flip = function() {
-
+var backwardsFlip = function() {
+  
 };
+
