@@ -1,4 +1,4 @@
-/* Rainbow Dancer Code */
+/** Rainbow Dancer Animations **/
 @-webkit-keyframes color_change{
   0% { border: 10px solid red; }
   20% { border: 10px solid orange; }
@@ -17,6 +17,23 @@
   100% { border: 10px solid purple; }
 }
 
+@-webkit-keyframes sloganFlash{
+  0% { color: red; }
+  20% { color: orange; }
+  40% { color: yellow; }
+  60% { color: green; }
+  80% { color: blue; }
+  100% { color: purple; }
+}
+
+@keyframes sloganFlash{
+  0% { color: red; }
+  20% { color: orange; }
+  40% { color: yellow; }
+  60% { color: green; }
+  80% { color: blue; }
+  100% { color: purple; }
+}
 @-webkit-keyframes backgroundFlash{
   0% { background-color: red; }
   20% { background-color: orange;}
@@ -35,8 +52,7 @@
   100% { background-color: purple; }
 }
 
-
-/* Bouncy Dancer Code */ 
+/** Bouncy Dancer Animations **/ 
 @-webkit-keyframes bouncing{
   0% { transform: translateY(-100%); }
   5% { transform: translateY(-200%); }
@@ -69,12 +85,43 @@
   100% { transform: translateY(0%); }
 }
 
-/* BackFlip Code */
+/** BackFlip Animation **/
 @-webkit-keyframes spin{
   100% { -webkit-transform: rotate(360deg); }
 }
 @keyframes spin{
   100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
+}
+
+/** DoseyDo Animation **/
+@-webkit-keyframes rotRight {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg);  }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg);  } 
+}
+
+@keyframes rotRight {
+  from { transform: rotate(0deg) translateX(-200px) rotate(0deg);  }
+  to { transform: rotate(360deg) translateX(-200px) rotate(-360deg);  } 
+}
+@-webkit-keyframes rotLeft {
+  from { transform: rotate(0deg) translateX(200px) rotate(0deg);  }
+  to { transform: rotate(-360deg) translateX(200px) rotate(360deg);  } 
+}
+
+@keyframes rotLeft {
+  from { transform: rotate(0deg) translateX(200px) rotate(0deg);  }
+  to { transform: rotate(-360deg) translateX(200px) rotate(360deg);  } 
+}
+
+/** Grow Trump **/
+@-webkit-keyframes growTrump {
+  from { transform: scale(1); }
+  to { transform: scale(3); } 
+}
+
+@keyframes growTrump {
+  from { transform: scale(1); }
+  to { transform: scale(3); } 
 }
 
 body, html{
@@ -86,6 +133,7 @@ body{
   font-size: 18px;
   background-image:url('assets/danceclub.jpg');
   background-size: cover;
+  overflow: hidden;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -134,8 +182,16 @@ body, a:link, a:visited, a:active{
   position:absolute;
   top: 50%;
   left: 35%;
-  /*transform: translate(-47.5%, -50%); /* Allen moves as page resizes*/*/
 }
+
+.fredDancer{
+  width: 450px;
+  height: 450px;
+  position:absolute;
+  top: 47%;
+  left: 10%;
+}
+
 .flipped{
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
@@ -144,4 +200,32 @@ body, a:link, a:visited, a:active{
   animation-name: spin;
   animation-duration: 1s;
   animation-iteration-count: 1;
+}
+
+.doseyDoRight{
+  animation: rotRight 2s 1 linear;
+}
+
+.doseyDoLeft{
+  animation: rotLeft 2s 1 linear;
+}
+
+.slogan{
+  display: none;
+  position: absolute;
+  text-align: center;
+  float: center;
+  font-style: bold;
+  top: 150px;
+  font-size: 72px;
+  animation-name: sloganFlash;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+.theDonald {
+  animation-name: growTrump;
+  animation-duration: 155s;
+  animation-iteration-count: 1;
+  
 }

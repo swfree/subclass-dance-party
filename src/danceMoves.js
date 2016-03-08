@@ -26,7 +26,15 @@ var lineUp = function() {
   
 };
 
-var backwardsFlip = function() {
-  
+var doseyDo = function () { 
+  $('.mainDancer').addClass('doseyDoRight');
+  $('.fredDancer').addClass('doseyDoLeft');
+  $('.mainDancer').removeClass('flipped');
+  $('.fredDancer').removeClass('flipped');
+  setTimeout(function () {
+    $('.mainDancer').toggleClass('flipped');
+    $('.fredDancer').toggleClass('flipped');
+    $('.mainDancer').removeClass('doseyDoRight');
+    $('.fredDancer').removeClass('doseyDoLeft');
+  }, 3000);
 };
-

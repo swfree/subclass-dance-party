@@ -25,6 +25,8 @@ $(document).ready(function() {
     // make a dancer with a random position
     if (dancerMakerFunctionName === 'lineUp') {
       lineUp();
+    } else if (dancerMakerFunctionName === 'doseyDo') {
+      doseyDo();
     } else {
       var dancer = new dancerMakerFunction(
         $('body').height() * Math.random(),
@@ -44,18 +46,20 @@ $(document).ready(function() {
       // move right
     } else if (e.which === 32) { // space bar
       $('.mainDancer').removeClass('flipped');
-      $('.mainDancer').addClass('backflip'); // replace 'backflip' with currentMove
+      $('.mainDancer').addClass('backflip'); 
       var allenDancer = $('.mainDancer');
       setTimeout(function() {
-        $(allenDancer).removeClass('backflip'); // replace 'backflip' with currentMove
+        $(allenDancer).removeClass('backflip'); 
       }, 1000);
     }
   });
   $('.trumpButton').on('click', function() {
     $('body').css('background-image', 'url(assets/trumpdancefloor.jpg)');
-  //backgroundSize: cover});
+    $('.fredDancer').remove();
     $('.mainDancer').attr('src', 'assets/TrumpTRex.png');
+    $('.mainDancer').addClass('theDonald');
     $('.danceMusic').attr('src', 'assets/trumpRemix.mp3');
+    $('.slogan').toggle();
   });
 });
 
