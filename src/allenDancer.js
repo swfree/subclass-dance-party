@@ -14,12 +14,9 @@ var AllenDancer = function() {
 AllenDancer.prototype.moveLorR = function(dancer) {
   this.moveList = ['L', 'R'];
   this.randMove = this.moveList[Math.floor(Math.random() * this.moveList.length)];
-  console.log(this);
-  //console.log(currentL);
-
 
   this.ourOffset = this.$node.offset();
-  console.log(this.ourOffset);
+
   if (this.randMove === 'L' && this.ourOffset.left > 100) {
     this.ourOffset.left = this.ourOffset.left - 100;
     this.ourOffset.top = '50%';
@@ -36,7 +33,7 @@ AllenDancer.prototype.check = function () {
   if (window.dancers.length > 1) {
     var allenOffset = window.dancers[0].offset();
     var fredOffset = window.dancers[1].offset();
-    if (Math.abs(allenOffset.left - fredOffset.left) < 100) {
+    if (Math.abs(allenOffset.left - fredOffset.left) < 50) {
       window.dancers[0].addClass('backflip');
       window.dancers[1].addClass('backflip');
       window.dancers[0].removeClass('flipped');

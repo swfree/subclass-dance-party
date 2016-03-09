@@ -61,6 +61,14 @@ $(document).ready(function() {
     $('.mainDancer').addClass('theDonald');
     $('.danceMusic').attr('src', 'assets/trumpRemix.mp3');
     $('.slogan').toggle();
+    $('.theDonald').on('mouseover', function () {
+      console.log(this);
+      $(this).height($(this).height() + 10);
+      $(this).width($(this).width() + 10);
+      $(this).offset({top: $(this).offset().top - 5, left: $(this).offset().left - 5});
+      console.log($(this).offset());
+    });
   });
+  
 });
 
