@@ -42,9 +42,19 @@ $(document).ready(function() {
   $(document).on('keydown', function (e) { //TODO: on spacebar keypress
     e.preventDefault();
     if (e.which === 37) { // left arrow
-      // move left
+      var ourOffset = window.dancers[0].offset();
+      if (ourOffset.left > 100) {
+        ourOffset.left = ourOffset.left - 50;
+        ourOffset.top = '50%';
+        window.dancers[0].offset(ourOffset);
+      }
     } else if (e.which === 39) { // right arrow
-      // move right
+      var ourOffset = window.dancers[0].offset();
+      if (ourOffset.left + 300 < window.innerWidth) {
+        ourOffset.left = ourOffset.left + 50;
+        ourOffset.top = '50%';
+        window.dancers[0].offset(ourOffset);
+      }
     } else if (e.which === 32) { // space bar
       $('.mainDancer').removeClass('flipped');
       $('.mainDancer').addClass('backflip'); 
@@ -61,14 +71,11 @@ $(document).ready(function() {
     $('.mainDancer').addClass('theDonald');
     $('.danceMusic').attr('src', 'assets/trumpRemix.mp3');
     $('.slogan').toggle();
+    $('.directions').text('Press Left and Right Arrows to Move Trump-Rex');
     $('.theDonald').on('mouseover', function () {
-      console.log(this);
       $(this).height($(this).height() + 10);
       $(this).width($(this).width() + 10);
       $(this).offset({top: $(this).offset().top - 5, left: $(this).offset().left - 5});
-      console.log($(this).offset());
     });
   });
-  
 });
-

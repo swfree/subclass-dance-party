@@ -169,7 +169,6 @@ body, a:link, a:visited, a:active{
   animation-name: bouncing;
   animation-duration: 2s;
   animation-iteration-count: infinite;
-  /*animation-direction: alternate;*/
 }
 .dancefloor {
   width: 100%;
@@ -227,11 +226,9 @@ body, a:link, a:visited, a:active{
   animation-direction: alternate;
   margin: 0 auto;
   text-align: middle;
-/*  margin-left: 50%;
-  margin-right: 50%;*/
 }
 .theDonald {
-  top: 13%;
+  top: 20%;
   left: 30%;
   width: 600px;
   height: 600px;
@@ -243,4 +240,12 @@ body, a:link, a:visited, a:active{
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 
+}
+
+ footer {
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  text-align: right;
+  margin-right: 20px;
 }

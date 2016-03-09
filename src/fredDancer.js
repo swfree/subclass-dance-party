@@ -10,15 +10,3 @@ var FredDancer = function() {
 
 FredDancer.prototype = Object.create(AllenDancer.prototype);
 FredDancer.prototype.constructor = FredDancer;
-
-
-
-
-
-  // var thisDancer = this;
-  // this.step = function() {
-  //   setTimeout(thisDancer.step.bind(this), 2000);
-  //   this.$node.toggleClass('flipped');
-  //   this.moveLorR();
-  // };
-  // this.step();
