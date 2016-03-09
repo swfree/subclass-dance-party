@@ -142,6 +142,10 @@ body, a:link, a:visited, a:active{
   padding:5px 12px;
   float:right;
 }
+.trumpButton{
+  padding:5px 12px;
+  float:right;
+}
 .topbar{
   height:32px;
   background-color: #555;
@@ -181,14 +185,14 @@ body, a:link, a:visited, a:active{
   height: 400px;
   position:absolute;
   top: 50%;
-  left: 35%;
+  left: 55%;
 }
 
 .fredDancer{
   width: 450px;
   height: 450px;
   position:absolute;
-  top: 47%;
+  top: 42%;
   left: 10%;
 }
 
@@ -224,8 +228,13 @@ body, a:link, a:visited, a:active{
   animation-direction: alternate;
 }
 .theDonald {
-  animation-name: growTrump;
+/*  animation-name: growTrump;
   animation-duration: 155s;
-  animation-iteration-count: 1;
+  animation-iteration-count: 1;*/
+  top: 13%;
+  left: 30%;
+  width: 600px;
+  height: 600px;
   
 }
+

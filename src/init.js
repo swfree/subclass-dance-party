@@ -1,6 +1,7 @@
 $(document).ready(function() {
   window.dancers = [];
   var allen = new AllenDancer();
+  window.dancers.push(allen.$node);
   $('body').append(allen.$node);
 
   $('.addDancerButton').on('click', function(event) {
